@@ -1,2 +1,0 @@
-# tenzies
-Simple react app
