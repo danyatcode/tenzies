@@ -35,6 +35,11 @@ main{
   background-color: #F5F5F5;
   border-radius: 16px;
   padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .title{
   font-size: 5em;
