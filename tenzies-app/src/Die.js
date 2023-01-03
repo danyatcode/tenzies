@@ -1,16 +1,11 @@
-export default function Die(){
+export default function Die(props){
     return(
-        <div className="tenzies">
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-            <div className="tenzy">1</div>
-          </div>
+            <div 
+                style={{backgroundColor : props.isHeld? "#59E391":"white"}} 
+                className="tenzy" 
+                onClick={props.holdDice}
+            >
+                {props.value} 
+            </div>
     )
 }
