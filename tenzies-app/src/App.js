@@ -1,12 +1,25 @@
 import React from 'react'
 import Die from './Die'
+import Congrats from './Congrats'
 
 function App() {
 
   const [dice, setDice] = React.useState(allNewDice());
 
-    const [tenzy, setTenzy] = React.useState(false)
-  
+    const [tenzies, setTenzies] = React.useState(false)
+    
+
+    React.useEffect(() => {
+      if(dice.every(tenzy => dice[0].value === tenzy.value && tenzy.isHeld)){
+        setTenzies(true);
+        console.log('won')
+      }
+      else{
+        setTenzies(false)
+      }
+    }, [dice])
+
+
   function generateNewDie(){
     return {
       value: Math.ceil(Math.random() * 6), 
@@ -35,7 +48,7 @@ function App() {
   }
 
   function rollBtn(){
-    setDice(prevDice => prevDice.map(elem => {
+    if(!tenzies){setDice(prevDice => prevDice.map(elem => {
       {if(elem.isHeld){
         return elem
       }else{
@@ -43,6 +56,11 @@ function App() {
       }
     }}))
   }
+  else{
+    setDice(allNewDice())
+  }
+}
+
   const diceElements = dice.map(element => <Die 
     key={element.id} 
     value={element.value} 
@@ -60,7 +78,8 @@ function App() {
            {diceElements}
           </div>
           
-          <button onClick={rollBtn} className="roll-btn">Roll</button>
+          <button onClick={rollBtn} className="roll-btn">{tenzies?"Start new game":"Roll"}</button>
+          {tenzies && <Congrats />}
       </main>
   );
 }
