@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tenzies/static/css/main.4ae98955.css",
-    "main.js": "/tenzies/static/js/main.96243580.js",
+    "main.css": "/tenzies/static/css/main.6c90deac.css",
+    "main.js": "/tenzies/static/js/main.5ba21f11.js",
     "index.html": "/tenzies/index.html",
-    "main.4ae98955.css.map": "/tenzies/static/css/main.4ae98955.css.map",
-    "main.96243580.js.map": "/tenzies/static/js/main.96243580.js.map"
+    "main.6c90deac.css.map": "/tenzies/static/css/main.6c90deac.css.map",
+    "main.5ba21f11.js.map": "/tenzies/static/js/main.5ba21f11.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ae98955.css",
-    "static/js/main.96243580.js"
+    "static/css/main.6c90deac.css",
+    "static/js/main.5ba21f11.js"
   ]
 }
